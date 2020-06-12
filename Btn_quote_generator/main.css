@@ -3,11 +3,15 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background:#ffd0a8;
-	color: #333;
+	background:#a9f2de;
+	color: #077759;
 	font-family:'calibri', san-serif;
 	font-weight:400;
 	text-transform: capitalize;
+}
+
+button{
+	border:none;
 }
 
 .container{
@@ -19,22 +23,37 @@ body{
 }
 
 #quoteBtn{
-	border:none;
+	border: none;
 	color: #fff;
-	background: #d89156;
+	background: #81d3e8;
 	font-size: 1.3rem;
 	padding: 0.25rem 0.5rem;
 	border-radius: 7px;
-	curser: pointer;
+	cursor: pointer;
 }
 
 #quoteBtn:hover{
-	color:#ffd000;
+	color:#077759;
+	border:none;
+}
+
+#quoteBtn:active{
+	border-color: #52adc4;
+	border-style: solid;
+	border-width: 2px 0px 0px 2px;
+}
+
+#quoteBtn:focus{
+	outline: 0;
+ /*
+    box-shadow: none;
+	*/
+	
 }
 
 blockquote{
-	background: #f9f9f9;
-	border-left:10px solid #fcdbbf;
+	background: #eaf8fc;
+	border-left:10px solid #077759;
 	margin: 1.5rem;
 	padding: 0.5rem;
 }
