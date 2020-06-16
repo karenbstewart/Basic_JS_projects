@@ -1,41 +1,37 @@
-const quotes = [
-{
-	name:'Stephen King',
-	quote:'Get busy living or get busy dying.'
-},
-{
-	name:'John F. Kennedy',
-	quote:'Those who dare to fail miserably can achieve greatly'
-},
-{
-	name:'Abraham Lincoln',
-	quote:'I\'m a success today because i had a friend who believed in me and i didn\'t have the heart to let him down.'
-},
-{
-	name:'Leonardo Da Vinci ',
-	quote:'It had long since come to my attention that people of accomplishment rarely sat back and let things happen to them. They went out and happened to things'
-},
-{
-	name:'Leo Tolstoy',
-	quote:'If you want to be happy, BE! '
-},
-]
+const sendBtn = document.querySelector('#sendBtn');
+const messageIn = document.querySelector('#messageIn');
+const messageOut = document.querySelector('#messageOut');
 
-const quoteBtn = document.querySelector('#quoteBtn');
-const quoteAutor = document.querySelector('#quoteAutor');
-const quote = document.querySelector('#quote');
+sendBtn.addEventListener('click', sendMsg);
 
-quoteBtn.addEventListener('click', displayQuote);
-
-function displayQuote(){
-	
-	let number = Math.floor(Math.random()*quotes.length);
-	//console.log(number);
-	quoteAuthor.innerHTML = quotes[number].name;
-	quote.innerHTML = quotes[number].quote;
-	
-	
+function sendMsg (){
+	let content = messageIn.value;
+	//console.log(content); this line show what the content of messageIn text is
+	if(content == ''){
+		alert('Please Enter a Valid Value. Current Value is Empty')
+	}else{
+		messageOut.innerHTML = content;
+		messageIn.value = '';
+	}
+			
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
